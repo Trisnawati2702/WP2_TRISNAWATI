@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan IF ELSE</title>
+</head>
+<body>
+<?php
+	$nila=$_POST['nilai1'];
+	$nilb=$_POST['nilai2'];
+	$r=$_POST['rumus'];
+<?
+
+
+	<h2>HASIL HITUNG RUMUS</h2>
+	Nilai a adalah = <?php echo "$nila"; ?> <br>
+	Nilai b adalah = <?php echo "$nilb"; ?> <br>
+
+
+?>php
+	if ($nila=="0" && $nilb=="0")
+	{echo "Tidak ada hasil perhitungan !!!";}
+	else
+	{
+		if ($r=="s")
+		{
+			$hasil=(0.5*($nila*$nilb));
+			echo "Rumus yang dipilih adalah = Segitiga<br>
+				  Hasil perhitungan rumus =$hasil";
+		}
+		else
+		{
+			$hasil=($nila*$nilb);
+			echo "Rumus yang dipilih adalah = Persegi Panjang<br>
+				  Hasil perhitungan rumus adalah = $hasil";
+		}
+	}
+?>
+</body>
+</html>
